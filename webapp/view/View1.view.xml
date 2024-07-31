@@ -7,9 +7,17 @@
     height="100%">
  <m:Page id="page" title="Watermelon Integration Application">
         <m:VBox>
+           <m:HBox class="header-icons" width="100%" justifyContent="SpaceBetween" alignItems="Center">
+                <m:VBox class="left-icon" alignItems="Center">
+                    <m:Image src="./img/melon1.png" width="150px" height="100px" alt="Melon Logo"/>
+                </m:VBox>
+                <m:VBox class="right-icon" alignItems="Center">
+                    <m:Image src="./img/kl.png" width="170px" height="100px" alt="Aymax Logo"/>
+                    <m:Text text="Siesta Team" wrapping="false" />
+                </m:VBox>
+            </m:HBox>
             <m:IconTabBar id="idIconTabBarNoIcons" class="sapUiResponsiveContentPadding">
                 <m:items>
-
 
                 <!-- first tile -->
                     <m:IconTabFilter key="info" text="Exchange Material HANA To Cloud">
@@ -380,15 +388,15 @@
                                     </Table>
                                     <m:HBox justifyContent="Center" width="100%">
                                 <m:ToolbarSpacer width="3px"/> 
-                                <m:Button text="Get Data from AQE 400 " press="Fetch" class="customButton1"  />
-                                <m:Button text="Send Data to Database" press="onPress" class="customButton1"  />
+                                <m:Button text="Get Data" press="Fetch" class="customButton1"  />
+                                <m:Button text="Send Data" press="onPress" class="customButton1"  />
 
                             </m:HBox>
                         </m:VBox>
                           </m:IconTabFilter>
 <!-- second tile  -->
 
-<m:IconTabFilter key="info" text="Exchange Material database To sap s/4 hana">
+<m:IconTabFilter key="info" text="Exchange Material From Cloud To HANA">
                         <m:VBox>
                             <Table id="tab2"
                                 rows="{dataModel>/items}"
@@ -737,8 +745,8 @@
                                     </Table>
                                     <m:HBox justifyContent="Center" width="100%">
                                 <m:ToolbarSpacer width="3px"/> 
-                                <m:Button text="Get Data from Database " press="Get" />
-                                <m:Button text="Send Data to AQE 400" press="Send"  />
+                                <m:Button text="Get Data" press="Get" class="customButton"  />
+                                <m:Button text="Send Data" press="Send"  class="customButton"  />
 
                             </m:HBox>
                         </m:VBox>
@@ -746,10 +754,10 @@
 
 <!-- third tile  -->
 
-<m:IconTabFilter key="info" text="Data Replication AQE 400 to ADE 200">
+<m:IconTabFilter key="info" text="Replication Customizing Data">
                         <m:VBox>
                             <Table id="tab3"
-                                rows="{odataModel>/results}"
+                                rows="{dataModel>/items}"
                                 selectionMode="MultiToggle"
                                 paste="onPaste"
                                 ariaLabelledBy="title"
@@ -763,25 +771,63 @@
                                 </extension>
                                <columns>
                                 <Column width="11rem">
-                                        <m:Label text="something" />
+                                        <m:Label text="First Name" />
                                         <template>
-                                            <m:Text text="something" />
+                                            <m:Text text="{dataModel>ZNAME}" />
+                                        </template>
+                                    </Column>
+
+                                     <Column width="11rem">
+                                        <m:Label text="ID Number" />
+                                        <template>
+                                            <m:Text text="{dataModel>ZNBR}" />
+                                        </template>
+                                    </Column>
+
+                                     <Column width="11rem">
+                                        <m:Label text="Pole" />
+                                        <template>
+                                            <m:Text text="{dataModel>ZPOLE}" />
+                                        </template>
+                                    </Column>
+
+                                     <Column width="11rem">
+                                        <m:Label text="Team" />
+                                        <template>
+                                            <m:Text text="{dataModel>ZTEAM}" />
+                                        </template>
+                                    </Column>
+
+                                    <Column width="11rem">
+                                        <m:Label text="Poste" />
+                                        <template>
+                                            <m:Text text="{dataModel>ZPOSTE}" />
                                         </template>
                                     </Column>
                                     <Column width="11rem">
-                                        <m:Label text="something2" />
+                                        <m:Label text="Contrat" />
                                         <template>
-                                            <m:Text text="something2" />
+                                            <m:Text text="{dataModel>ZCONTRAT}" />
                                         </template>
                                     </Column>
+                                    
+                                    <Column width="11rem">
+                                        <m:Label text="Date Embauche" />
+                                        <template>
+                                            <m:Text text="{dataModel>ZDATEEMB}" />
+                                        </template>
+                                    </Column>
+
                                     </columns>
+
+                                    
 
 
                                     </Table>
                                     <m:HBox justifyContent="Center" width="100%">
                                 <m:ToolbarSpacer width="3px"/> 
-                                <m:Button text="Get Data from Database" press="Retrieve"   />
-                                <m:Button text="Send Data to AQE 400" press="Replicate"  />
+                                <m:Button text="Get Data" press="Retrieve"  class="customButton"  />
+                                <m:Button text="Send Data" press="Replicate" class="customButton"   />
                             </m:HBox>
                         </m:VBox>
                           </m:IconTabFilter>
