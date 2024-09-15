@@ -1,0 +1,91 @@
+<mvc:View controllerName="project2.controller.switch"
+    xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.f"
+    xmlns:u="sap.ui.unified"
+	xmlns="sap.m"
+	xmlns:tnt="sap.tnt"
+    xmlns:layout="sap.ui.layout"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:grid="sap.ui.layout.cssgrid"
+	xmlns:dnd="sap.ui.core.dnd"
+	xmlns:dnd-grid="sap.f.dnd"
+    xmlns:t="sap.ui.table"
+    height="100%">
+
+		<VBox
+		class="sapUiSmallMargin" >
+		<HBox>
+			<Switch state="true">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</Switch>
+			<Switch state="false">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</Switch>
+			<Switch state="true" enabled="false">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</Switch>
+		</HBox>
+
+		<HBox>
+			<Switch state="true" customTextOn="Yes" customTextOff="No">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</Switch>
+			<Switch state="false" customTextOn="Yes" customTextOff="No">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</Switch>
+			<Switch state="true" customTextOn="Yes" customTextOff="No" enabled="false">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</Switch>
+		</HBox>
+
+		<HBox>
+			<Switch state="true" customTextOn=" " customTextOff=" ">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</Switch>
+			<Switch state="false" customTextOn=" " customTextOff=" ">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</Switch>
+			<Switch state="true" customTextOn=" " customTextOff=" " enabled="false">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</Switch>
+		</HBox>
+
+		<HBox>
+			<Switch type="AcceptReject" state="true">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</Switch>
+			<Switch type="AcceptReject" state="false">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</Switch>
+			<Switch type="AcceptReject" state="true" enabled="false">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</Switch>
+		</HBox>
+	</VBox>
+
+    </mvc:View>

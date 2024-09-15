@@ -1,838 +1,157 @@
 <mvc:View controllerName="project2.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.ui.table"
+    xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.f"
     xmlns:u="sap.ui.unified"
-    xmlns:c="sap.ui.core"
-    xmlns:m="sap.m"
+	xmlns="sap.m"
+	xmlns:tnt="sap.tnt"
+    xmlns:layout="sap.ui.layout"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:grid="sap.ui.layout.cssgrid"
+	xmlns:dnd="sap.ui.core.dnd"
+	xmlns:dnd-grid="sap.f.dnd"
+    xmlns:t="sap.ui.table"
     height="100%">
- <m:Page id="page" title="Watermelon Integration Application">
-        <m:VBox>
-           <m:HBox class="header-icons" width="100%" justifyContent="SpaceBetween" alignItems="Center">
-                <m:VBox class="left-icon" alignItems="Center">
-                    <m:Image src="./img/melon1.png" width="150px" height="100px" alt="Melon Logo"/>
-                </m:VBox>
-                <m:VBox class="right-icon" alignItems="Center">
-                    <m:Image src="./img/kl.png" width="170px" height="100px" alt="Aymax Logo"/>
-                    <m:Text text="Siesta Team" wrapping="false" />
-                </m:VBox>
-            </m:HBox>
-            <m:IconTabBar id="idIconTabBarNoIcons" class="sapUiResponsiveContentPadding">
-                <m:items>
 
-                <!-- first tile -->
-                    <m:IconTabFilter key="info" text="Exchange Material HANA To Cloud">
-                        <m:VBox>
-                            <Table id="tab"
-                                rows="{odataModel>/results}"
-                                selectionMode="MultiToggle"
-                                paste="onPaste"
-                                ariaLabelledBy="title"
-                                class="centeredTable"
-                                >
-                                <extension>
-                                    <m:OverflowToolbar style="Clear">
-                                        <m:Title text="List of Materials"/>
-                                    </m:OverflowToolbar>
-                                </extension>
-                                <columns>
-                                    <Column width="11rem">
-                                        <m:Label text="Mandt" />
-                                        <template>
-                                            <m:Text text="{odataModel>Mandt}" wrapping="false" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Matnr" />
-                                        <template>
-                                            <m:Text text="{odataModel>Matnr}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Ersda" />
-                                        <template>
-                                            <m:Text text="{odataModel>Ersda}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="CreatedAtTime" />
-                                        <template>
-                                            <m:Text text="{odataModel>CreatedAtTime}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Ernam" />
-                                        <template>
-                                            <m:Text text="{odataModel>Ernam}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Aenam" />
-                                        <template>
-                                            <m:Text text="{odataModel>Aenam}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Vpsta" />
-                                        <template>
-                                            <m:Text text="{odataModel>Vpsta}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Pstat" />
-                                        <template>
-                                            <m:Text text="{odataModel>Pstat}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Mtart" />
-                                        <template>
-                                            <m:Text text="{odataModel>Mtart}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Mbrsh" />
-                                        <template>
-                                            <m:Text text="{odataModel>Mbrsh}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Meins" />
-                                        <template>
-                                            <m:Text text="{odataModel>Meins}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Created by" />
-                                        <template>
-                                            <m:Text text="{odataModel>Ernam}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Blanz" />
-                                        <template>
-                                            <m:Text text="{odataModel>Blanz}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Brgew" />
-                                        <template>
-                                            <m:Text text="{odataModel>Brgew}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Ntgew" />
-                                        <template>
-                                            <m:Text text="{odataModel>Ntgew}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Volum" />
-                                        <template>
-                                            <m:Text text="{odataModel>Volum}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Wesch" />
-                                        <template>
-                                            <m:Text text="{odataModel>Wesch}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Laeng" />
-                                        <template>
-                                            <m:Text text="{odataModel>Laeng}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Breit" />
-                                        <template>
-                                            <m:Text text="{odataModel>Breit}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Created by" />
-                                        <template>
-                                            <m:Text text="{odataModel>Ernam}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Hoehe" />
-                                        <template>
-                                            <m:Text text="{odataModel>Hoehe}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Ergew" />
-                                        <template>
-                                            <m:Text text="{odataModel>Ergew}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Ervol" />
-                                        <template>
-                                            <m:Text text="{odataModel>Ervol}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Gewto" />
-                                        <template>
-                                            <m:Text text="{odataModel>Gewto}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Volto" />
-                                        <template>
-                                            <m:Text text="{odataModel>Volto}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Created by" />
-                                        <template>
-                                            <m:Text text="{odataModel>Ernam}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Fuelg" />
-                                        <template>
-                                            <m:Text text="{odataModel>Fuelg}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Stfak" />
-                                        <template>
-                                            <m:Text text="{odataModel>Stfak}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Extwg" />
-                                        <template>
-                                            <m:Text text="{odataModel>Extwg}" />
-                                        </template>
-                                    </Column>
-
-                                    <Column width="11rem">
-                                        <m:Label text="Compl" />
-                                        <template>
-                                            <m:Text text="{odataModel>Compl}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="MtposMara" />
-                                        <template>
-                                            <m:Text text="{odataModel>MtposMara}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="MatnrExternal" />
-                                        <template>
-                                            <m:Text text="{odataModel>MatnrExternal}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Anp" />
-                                        <template>
-                                            <m:Text text="{odataModel>Anp}" />
-                                        </template>
-                                    </Column>
-
-                                    <!-- here -->
-                                <Column width="11rem">
-                                        <m:Label text="CONTAINER" />
-                                        <template>
-                                            <m:Text text="{odataModel>CONTAINER}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="BEGIN" />
-                                        <template>
-                                            <m:Text text="{odataModel>BEGIN}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="EDI_DC40" />
-                                        <template>
-                                            <m:Text text="{odataModel>EDI_DC40}" />
-                                        </template>
-                                    </Column>
-
-                                    <Column width="11rem">
-                                        <m:Label text="SEGMENT_1" />
-                                        <template>
-                                            <m:Text text="{odataModel>SEGMENT_1}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="TABNAM" />
-                                        <template>
-                                            <m:Text text="{odataModel>TABNAM}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="DOCREL" />
-                                        <template>
-                                            <m:Text text="{odataModel>DOCREL}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="STATUS" />
-                                        <template>
-                                            <m:Text text="{odataModel>STATUS}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="MESTYP" />
-                                        <template>
-                                            <m:Text text="{odataModel>MESTYP}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="DIRECT" />
-                                        <template>
-                                            <m:Text text="{odataModel>DIRECT}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="IDOCTYP" />
-                                        <template>
-                                            <m:Text text="{odataModel>IDOCTYP}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="SNDPOR" />
-                                        <template>
-                                            <m:Text text="{odataModel>SNDPOR}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="SNDPRT" />
-                                        <template>
-                                            <m:Text text="{odataModel>SNDPRT}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="SNDPRN" />
-                                        <template>
-                                            <m:Text text="{odataModel>SNDPRN}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="RCVPOR" />
-                                        <template>
-                                            <m:Text text="{odataModel>RCVPOR}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="RCVPRT" />
-                                        <template>
-                                            <m:Text text="{odataModel>RCVPRT}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="RCVPRN" />
-                                        <template>
-                                            <m:Text text="{odataModel>RCVPRN}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="E1MARAM" />
-                                        <template>
-                                            <m:Text text="{odataModel>E1MARAM}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="SEGMENT_2" />
-                                        <template>
-                                            <m:Text text="{odataModel>SEGMENT_2}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="MATNR_LONG" />
-                                        <template>
-                                            <m:Text text="{odataModel>MATNR_LONG}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="E1MAKTM" />
-                                        <template>
-                                            <m:Text text="{odataModel>E1MAKTM}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="SEGMENT_3" />
-                                        <template>
-                                            <m:Text text="{odataModel>SEGMENT_3}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="MSGFN" />
-                                        <template>
-                                            <m:Text text="{odataModel>MSGFN}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="MAKTX" />
-                                        <template>
-                                            <m:Text text="{odataModel>MAKTX}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="SPRAS_ISO" />
-                                        <template>
-                                            <m:Text text="{odataModel>SPRAS_ISO}" />
-                                        </template>
-                                    </Column>
-
-                                    <!-- here -->
-
-                                    </columns>
-                                    </Table>
-                                    <m:HBox justifyContent="Center" width="100%">
-                                <m:ToolbarSpacer width="3px"/> 
-                                <m:Button text="Get Data" press="Fetch" class="customButton1"  />
-                                <m:Button text="Send Data" press="onPress" class="customButton1"  />
-
-                            </m:HBox>
-                        </m:VBox>
-                          </m:IconTabFilter>
-<!-- second tile  -->
-
-<m:IconTabFilter key="info" text="Exchange Material From Cloud To HANA">
-                        <m:VBox>
-                            <Table id="tab2"
-                                rows="{dataModel>/items}"
-                                selectionMode="MultiToggle"
-                                paste="onPaste"
-                                ariaLabelledBy="title"
-                                class="centeredTable"
-                                >
-
-                                <extension>
-                                    <m:OverflowToolbar style="Clear">
-                                        <m:Title text="List of Materials"/>
-                                    </m:OverflowToolbar>
-                                </extension>
-                               
-                                <columns>
-                                    <Column width="11rem">
-                                        <m:Label text="Mandt" />
-                                        <template>
-                                            <m:Text text="{dataModel>Mandt}" wrapping="false" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Matnr" />
-                                        <template>
-                                            <m:Text text="{dataModel>Matnr}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Ersda" />
-                                        <template>
-                                            <m:Text text="{dataModel>Ersda}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="CreatedAtTime" />
-                                        <template>
-                                            <m:Text text="{dataModel>CreatedAtTime}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Ernam" />
-                                        <template>
-                                            <m:Text text="{dataModel>Ernam}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Aenam" />
-                                        <template>
-                                            <m:Text text="{dataModel>Aenam}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Vpsta" />
-                                        <template>
-                                            <m:Text text="{dataModel>Vpsta}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Pstat" />
-                                        <template>
-                                            <m:Text text="{dataModel>Pstat}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Mtart" />
-                                        <template>
-                                            <m:Text text="{dataModel>Mtart}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Mbrsh" />
-                                        <template>
-                                            <m:Text text="{dataModel>Mbrsh}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Meins" />
-                                        <template>
-                                            <m:Text text="{dataModel>Meins}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Blanz" />
-                                        <template>
-                                            <m:Text text="{dataModel>Blanz}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Brgew" />
-                                        <template>
-                                            <m:Text text="{dataModel>Brgew}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Ntgew" />
-                                        <template>
-                                            <m:Text text="{dataModel>Ntgew}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Volum" />
-                                        <template>
-                                            <m:Text text="{dataModel>Volum}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Wesch" />
-                                        <template>
-                                            <m:Text text="{dataModel>Wesch}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Laeng" />
-                                        <template>
-                                            <m:Text text="{dataModel>Laeng}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Breit" />
-                                        <template>
-                                            <m:Text text="{dataModel>Breit}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Hoehe" />
-                                        <template>
-                                            <m:Text text="{dataModel>Hoehe}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Ergew" />
-                                        <template>
-                                            <m:Text text="{dataModel>Ergew}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Ervol" />
-                                        <template>
-                                            <m:Text text="{dataModel>Ervol}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Gewto" />
-                                        <template>
-                                            <m:Text text="{dataModel>Gewto}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Volto" />
-                                        <template>
-                                            <m:Text text="{dataModel>Volto}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Fuelg" />
-                                        <template>
-                                            <m:Text text="{dataModel>Fuelg}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Stfak" />
-                                        <template>
-                                            <m:Text text="{dataModel>Stfak}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Extwg" />
-                                        <template>
-                                            <m:Text text="{dataModel>Extwg}" />
-                                        </template>
-                                    </Column>
-
-                                    <Column width="11rem">
-                                        <m:Label text="Compl" />
-                                        <template>
-                                            <m:Text text="{dataModel>Compl}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="MtposMara" />
-                                        <template>
-                                            <m:Text text="{dataModel>MtposMara}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="MatnrExternal" />
-                                        <template>
-                                            <m:Text text="{dataModel>MatnrExternal}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Anp" />
-                                        <template>
-                                            <m:Text text="{dataModel>Anp}" />
-                                        </template>
-                                    </Column>
-                                    </columns>
-                                 <Column width="11rem">
-                                        <m:Label text="CONTAINER" />
-                                        <template>
-                                            <m:Text text="{dataModel>CONTAINER}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="BEGIN" />
-                                        <template>
-                                            <m:Text text="{dataModel>BEGIN}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="EDI_DC40" />
-                                        <template>
-                                            <m:Text text="{dataModel>EDI_DC40}" />
-                                        </template>
-                                    </Column>
-
-                                    <Column width="11rem">
-                                        <m:Label text="SEGMENT_1" />
-                                        <template>
-                                            <m:Text text="{dataModel>SEGMENT_1}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="TABNAM" />
-                                        <template>
-                                            <m:Text text="{dataModel>TABNAM}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="DOCREL" />
-                                        <template>
-                                            <m:Text text="{dataModel>DOCREL}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="STATUS" />
-                                        <template>
-                                            <m:Text text="{dataModel>STATUS}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="MESTYP" />
-                                        <template>
-                                            <m:Text text="{dataModel>MESTYP}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="DIRECT" />
-                                        <template>
-                                            <m:Text text="{dataModel>DIRECT}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="IDOCTYP" />
-                                        <template>
-                                            <m:Text text="{dataModel>IDOCTYP}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="SNDPOR" />
-                                        <template>
-                                            <m:Text text="{dataModel>SNDPOR}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="SNDPRT" />
-                                        <template>
-                                            <m:Text text="{dataModel>SNDPRT}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="SNDPRN" />
-                                        <template>
-                                            <m:Text text="{dataModel>SNDPRN}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="RCVPOR" />
-                                        <template>
-                                            <m:Text text="{dataModel>RCVPOR}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="RCVPRT" />
-                                        <template>
-                                            <m:Text text="{dataModel>RCVPRT}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="RCVPRN" />
-                                        <template>
-                                            <m:Text text="{dataModel>RCVPRN}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="E1MARAM" />
-                                        <template>
-                                            <m:Text text="{dataModel>E1MARAM}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="SEGMENT_2" />
-                                        <template>
-                                            <m:Text text="{dataModel>SEGMENT_2}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="MATNR_LONG" />
-                                        <template>
-                                            <m:Text text="{dataModel>MATNR_LONG}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="E1MAKTM" />
-                                        <template>
-                                            <m:Text text="{dataModel>E1MAKTM}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="SEGMENT_3" />
-                                        <template>
-                                            <m:Text text="{dataModel>SEGMENT_3}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="MSGFN" />
-                                        <template>
-                                            <m:Text text="{dataModel>MSGFN}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="MAKTX" />
-                                        <template>
-                                            <m:Text text="{dataModel>MAKTX}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="SPRAS_ISO" />
-                                        <template>
-                                            <m:Text text="{dataModel>SPRAS_ISO}" />
-                                        </template>
-                                    </Column>
+		<tnt:ToolHeader id="ToolHeader" class="sapUiTinyMargin sapUiLargeMarginTop">
+			<Title text="Workshop Fiori" wrapping="false">
+			</Title>			
+		</tnt:ToolHeader>
 
 
-                                    </Table>
-                                    <m:HBox justifyContent="Center" width="100%">
-                                <m:ToolbarSpacer width="3px"/> 
-                                <m:Button text="Get Data" press="Get" class="customButton"  />
-                                <m:Button text="Send Data" press="Send"  class="customButton"  />
 
-                            </m:HBox>
-                        </m:VBox>
-                          </m:IconTabFilter>
+<HBox class="sapUiTinyMargin">
+<OverflowToolbar id="otb1">
+	<Label text="Buttons:"/>
+		<ToolbarSpacer/>
+		<FlexBox
+        alignItems="Center"
+        justifyContent="SpaceBetween"
+        width="100%">
+			<Button
+				text="Buttons"
+				type="Transparent"
+				press="onNavigateTobutton">
+				
+			
+			</Button>
+			<Button
+				text="Tables"
+				type="Transparent"
+				press="onNavigateTotable">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				
+			</Button>
+			<Button
+				text="Carousel"
+				type="Transparent"
+				press="onNavigateTocarousel">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				
+			</Button>
+			<Button
+				text="Message Strip"
+				type="Transparent"
+				press="onNavigateTomessagestrip">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				
+			</Button>
 
-<!-- third tile  -->
+			<Button
+				text="Forms"
+				type="Transparent"
+				press="onNavigateToforms">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				
+			
+			</Button>
 
-<m:IconTabFilter key="info" text="Replication Customizing Data">
-                        <m:VBox>
-                            <Table id="tab3"
-                                rows="{dataModel>/items}"
-                                selectionMode="MultiToggle"
-                                paste="onPaste"
-                                ariaLabelledBy="title"
-                                class="centeredTable"
-                                >
-
-                                <extension>
-                                    <m:OverflowToolbar style="Clear">
-                                        <m:Title text="List of Materials"/>
-                                    </m:OverflowToolbar>
-                                </extension>
-                               <columns>
-                                <Column width="11rem">
-                                        <m:Label text="First Name" />
-                                        <template>
-                                            <m:Text text="{dataModel>ZNAME}" />
-                                        </template>
-                                    </Column>
-
-                                     <Column width="11rem">
-                                        <m:Label text="ID Number" />
-                                        <template>
-                                            <m:Text text="{dataModel>ZNBR}" />
-                                        </template>
-                                    </Column>
-
-                                     <Column width="11rem">
-                                        <m:Label text="Pole" />
-                                        <template>
-                                            <m:Text text="{dataModel>ZPOLE}" />
-                                        </template>
-                                    </Column>
-
-                                     <Column width="11rem">
-                                        <m:Label text="Team" />
-                                        <template>
-                                            <m:Text text="{dataModel>ZTEAM}" />
-                                        </template>
-                                    </Column>
-
-                                    <Column width="11rem">
-                                        <m:Label text="Poste" />
-                                        <template>
-                                            <m:Text text="{dataModel>ZPOSTE}" />
-                                        </template>
-                                    </Column>
-                                    <Column width="11rem">
-                                        <m:Label text="Contrat" />
-                                        <template>
-                                            <m:Text text="{dataModel>ZCONTRAT}" />
-                                        </template>
-                                    </Column>
-                                    
-                                    <Column width="11rem">
-                                        <m:Label text="Date Embauche" />
-                                        <template>
-                                            <m:Text text="{dataModel>ZDATEEMB}" />
-                                        </template>
-                                    </Column>
-
-                                    </columns>
-
-                                    
+			<Button
+				text="Icons"
+				type="Transparent"
+				press="onNavigateToicons">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				
+			
+			</Button>
 
 
-                                    </Table>
-                                    <m:HBox justifyContent="Center" width="100%">
-                                <m:ToolbarSpacer width="3px"/> 
-                                <m:Button text="Get Data" press="Retrieve"  class="customButton"  />
-                                <m:Button text="Send Data" press="Replicate" class="customButton"   />
-                            </m:HBox>
-                        </m:VBox>
-                          </m:IconTabFilter>
-                           </m:items>
-            </m:IconTabBar>
-        </m:VBox>
-    </m:Page>
-</mvc:View>
+			<Button
+				text="Message Box Initial Focus"
+				type="Transparent"
+				press="onNavigateTomessagebox">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				
+			
+			</Button>
+
+			<Button
+				text="Monitor Tile"
+				type="Transparent"
+				press="onNavigateToMonitorTile">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				
+			
+			</Button>
+		
+
+			
+			<Button
+				text="Switch"
+				type="Transparent"
+				press="onNavigateToswitch">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				
+			</Button>
+    </FlexBox>
+	</OverflowToolbar>
+		</HBox>
+ 
+<VBox class="sapUiSmallMargin">
+		
+<VBox id="container">
+                <!-- View 2 will be loaded here -->
+</VBox>
+        
+
+		
+		<HBox>
+			<Button
+				text="Back"
+				type="Back"
+				press="handleNav">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</Button>
+
+			<Select id="animationSelect">
+				<core:Item text="Slide animation" key="slide" />
+				<core:Item text="Base slide animation" key="baseSlide" />
+				<core:Item text="Fade animation" key="fade" />
+				<core:Item text="Flip animation" key="flip" />
+				<core:Item text="Show animation" key="show" />
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</Select>
+		</HBox>
+
+	</VBox>			
+</mvc:View> 

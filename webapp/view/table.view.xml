@@ -1,0 +1,62 @@
+<mvc:View controllerName="project2.controller.table"
+    xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.f"
+    xmlns:u="sap.ui.unified"
+	xmlns="sap.m"
+	xmlns:tnt="sap.tnt"
+    xmlns:layout="sap.ui.layout"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:grid="sap.ui.layout.cssgrid"
+	xmlns:dnd="sap.ui.core.dnd"
+	xmlns:dnd-grid="sap.f.dnd"
+    xmlns:t="sap.ui.table"
+    height="100%">
+
+<Table
+                id="table"
+                inset="false"
+               >
+                
+                <!-- Define columns -->
+                <columns>
+                    <Column>
+                        <Text text="Name"/>
+                    </Column>
+                    <Column>
+                        <Text text="Age"/>
+                    </Column>
+                    <Column>
+                        <Text text="City"/>
+                    </Column>
+                </columns>
+                
+                <!-- Define table items -->
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="John Doe"/>
+                            <Text text="30"/>
+                            <Text text="New York"/>
+                        </cells>
+                    </ColumnListItem>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="Jane Smith"/>
+                            <Text text="25"/>
+                            <Text text="Los Angeles"/>
+                        </cells>
+                    </ColumnListItem>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="Mike Johnson"/>
+                            <Text text="35"/>
+                            <Text text="Chicago"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+
+
+
+    </mvc:View>

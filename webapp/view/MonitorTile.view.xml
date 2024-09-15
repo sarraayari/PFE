@@ -1,0 +1,32 @@
+<mvc:View controllerName="project2.controller.MonitorTile"
+    xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.f"
+    xmlns:u="sap.ui.unified"
+	xmlns="sap.m"
+	xmlns:tnt="sap.tnt"
+    xmlns:layout="sap.ui.layout"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:grid="sap.ui.layout.cssgrid"
+	xmlns:dnd="sap.ui.core.dnd"
+	xmlns:dnd-grid="sap.f.dnd"
+    xmlns:t="sap.ui.table"
+    height="100%">
+
+
+
+<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Cumulative Totals" subheader="Expenses" press="press">
+		<TileContent unit="Unit" footer="Footer Text">
+			<NumericContent value="1762" icon="sap-icon://line-charts" withMargin="false" />
+		</TileContent>
+	</GenericTile>
+
+	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Cumulative Totals" subheader="Expenses" press="press">
+		<TileContent unit="Unit" footer="Footer Text">
+			<NumericContent value="12" withMargin="false" />
+		</TileContent>
+	</GenericTile>
+
+
+
+    </mvc:View>

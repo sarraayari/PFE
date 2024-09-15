@@ -1,0 +1,20 @@
+<mvc:View controllerName="project2.controller.carousel"
+    xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.f"
+    xmlns:u="sap.ui.unified"
+	xmlns="sap.m"
+	xmlns:tnt="sap.tnt"
+    xmlns:layout="sap.ui.layout"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:grid="sap.ui.layout.cssgrid"
+	xmlns:dnd="sap.ui.core.dnd"
+	xmlns:dnd-grid="sap.f.dnd"
+    xmlns:t="sap.ui.table"
+    height="100%">
+<Carousel ariaLabelledBy="carouselTitle" class="sapUiContentPadding" loop="true">
+		<Image src="./img/akrem.jpg" alt="Team Lead" />
+		<Image src="./img/akrem.jpg" alt="Team Lead" />
+		
+	</Carousel>
+    </mvc:View>

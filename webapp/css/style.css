@@ -1,142 +1,19 @@
-
-.customButton1 .sapMBtnInner {
-    background-color: green !important;
-    color: rgb(253, 248, 248) !important;
-    border: none !important;
-    padding: 3px 45px !important;
-    font-size: 20px !important;
-    border-radius: 10px !important;
-    cursor: pointer !important;
-    text-align: center !important; 
-   margin: 0 10px;
-
-    }
-    .customButton .sapMBtnInner {
-       
-        background-color: green !important;
-        color: rgb(253, 248, 248) !important;
-        border: none !important;
-        padding: 3px 45px !important;
-        font-size: 20px !important;
-        border-radius: 10px !important;
-        cursor: pointer !important;
-        text-align: center !important; /* Centrer le texte */
-        margin: 0 10px;
-    }
-    
-        
-
-        .centeredTable {
-            margin: 70px auto; /* Center the table horizontally and add some top margin */
-            max-width: 100%; /* Increase the maximum width */
-            border-collapse: collapse; /* Merge table borders */
-            background-color: #fff; /* White background color */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add a more prominent shadow */
-            border-radius: 8px; /* Add rounded corners */
-            overflow: hidden; /* Ensure the rounded corners are applied */
-        }
-        
-        .centeredTable .sapUiTableCell, 
-        .centeredTable .sapUiTableHeaderCell {
-            padding: 15px; /* Increase padding for cells */
-            border-bottom: 1px solid #e0e0e0; /* Add a bottom border to cells */
-            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-        }
-        
-        .centeredTable .sapUiTableHeaderCell {
-            background-color: #c5c8c5; /* Primary blue color for header background */
-            color: white; /* White text color for header */
-            padding: 20px; /* Increase padding for header cells */
-            font-weight: bold; /* Make header text bold */
-        }
-        
-        .centeredTable .sapUiTableRowEven {
-            background-color: #f9f9f9; /* Light grey background color for even rows */
-        }
-        
-        .centeredTable .sapUiTableRowOdd {
-            background-color: #fff; /* White background color for odd rows */
-        }
-        
-        .centeredTable .sapUiTableRowEven:hover, 
-        .centeredTable .sapUiTableRowOdd:hover {
-            background-color: #e9ecef; /* Light blue-grey background color on hover */
-        }
-        
-        .centeredTable .sapUiTableCell:first-child {
-            border-left: 1px solid #e0e0e0; /* Left border for the first cell */
-        }
-        
-        .centeredTable .sapUiTableCell:last-child {
-            border-right: 1px solid #e0e0e0; /* Right border for the last cell */
-        }
-        
-        .centeredTable .sapUiTableHeaderCell:first-child {
-            border-left: 1px solid #e0e0e0; /* Left border for the first header cell */
-        }
-        
-        .centeredTable .sapUiTableHeaderCell:last-child {
-            border-right: 1px solid #e0e0e0; /* Right border for the last header cell */
-        }
-        
-
-
-.tabs {
-    margin: 0 auto; /* Center the table horizontally */
-    max-width: 100%; /* Optional: limit the maximum width */
-    border-collapse: collapse; /* Merge table borders */
-    background-color: #f9f9f9; /* Light background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+.sapMFlexBox.demoBox {
+	border-radius: 10px;
+	background-color: #427cac;
+	text-align: center;
+}
+.demoBox .sapMTitle,
+.demoBox .sapMText {
+	color: #ffffff;
 }
 
-.tabs .sapUiTableCell {
-    padding: 10px; /* Add padding to cells */
-    border-bottom: 1px solid #ddd; /* Add a bottom border to cells */
+.sapMFlexBox.sapMFlexBoxWrapNoWrap.sapMVBox .demoInnerBox {
+	background: lightblue;
+	border-radius: 10px;
 }
 
-.tabs .sapUiTableHeaderCell {
-    background-color: #c5c8c5; /* Header background color */
-    color: white; /* Header text color */
-    padding: 12px; /* Add padding to header cells */
-    border-bottom: 2px solid #ddd; /* Add a bottom border to header cells */
+.sapMFlexBox.sapMFlexBoxWrapNoWrap.sapMVBox .demoInnerBox .sapMTitle,
+.sapMFlexBox.sapMFlexBoxWrapNoWrap.sapMVBox .demoInnerBox .sapMText {
+	color: #333333;
 }
-
-.tabs .sapUiTableRowEven {
-    background-color: #f2f2f2; /* Background color for even rows */
-}
-
-.tabs .sapUiTableRowOdd {
-    background-color: #fff; /* Background color for odd rows */
-}
-
-
-
-
-.tab2 {
-    margin: 0 auto; /* Center the table horizontally */
-    max-width: 30%; /* Optional: limit the maximum width */
-    border-collapse: collapse; /* Merge table borders */
-    background-color: #f9f9f9; /* Light background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-}
-
-.tab2 .sapUiTableCell {
-    padding: 10px; /* Add padding to cells */
-    border-bottom: 1px solid #ddd; /* Add a bottom border to cells */
-}
-
-.tab2 .sapUiTableHeaderCell {
-    background-color: #c5c8c5; /* Header background color */
-    color: white; /* Header text color */
-    padding: 12px; /* Add padding to header cells */
-    border-bottom: 2px solid #ddd; /* Add a bottom border to header cells */
-}
-
-.tab2 .sapUiTableRowEven {
-    background-color: #f2f2f2; /* Background color for even rows */
-}
-
-.tab2 .sapUiTableRowOdd {
-    background-color: #fff; /* Background color for odd rows */
-}
-

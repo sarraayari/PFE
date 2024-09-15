@@ -63,6 +63,10 @@
       "cozy": true
     },
     "models": {
+      "data": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "./model/data.json"
+			},
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
@@ -99,7 +103,71 @@
           "target": [
             "TargetView1"
           ]
+        },
+        {
+          "name": "Routebutton",
+          "pattern": "button",
+          "target": [
+            "Targetbutton"
+          ]
+        },
+        {
+          "name": "Routetable",
+          "pattern": "table",
+          "target": [
+            "Targettable"
+          ]
+        },
+        {
+          "name": "Routecarousel",
+          "pattern": "carousel",
+          "target": [
+            "Targetcarousel"
+          ]
+        },
+        {
+          "name": "Routeswitch",
+          "pattern": "switch",
+          "target": [
+            "Targetswitch"
+          ]
+        },
+        {
+          "name": "Routemessagestrip",
+          "pattern": "messagestrip",
+          "target": [
+            "Targetmessagestrip"
+          ]
+        },
+        {
+          "name": "Routeicons",
+          "pattern": "icons",
+          "target": [
+            "Targeticons"
+          ]
+        },
+        {
+          "name": "Routeforms",
+          "pattern": "forms",
+          "target": [
+            "Targetforms"
+          ]
+        },
+        {
+          "name": "Routemessagebox",
+          "pattern": "messagebox",
+          "target": [
+            "Targetmessagebox"
+          ]
+        },
+        {
+          "name": "RouteMonitorTile",
+          "pattern": "MonitorTile",
+          "target": [
+            "TargetMonitorTile"
+          ]
         }
+
       ],
       "targets": {
         "TargetView1": {
@@ -108,8 +176,73 @@
           "clearControlAggregation": false,
           "viewId": "View1",
           "viewName": "View1"
+        },
+      "TargetMonitorTile": {
+        "viewType": "XML",
+        "transition": "slide",
+        "clearControlAggregation": false,
+        "viewId": "MonitorTile",
+        "viewName": "MonitorTile"
+        },
+        "Targetbutton": {
+        "viewType": "XML",
+        "transition": "slide",
+        "clearControlAggregation": false,
+        "viewId": "button",
+        "viewName": "button"
+        },
+        "Targetmessagebox": {
+        "viewType": "XML",
+        "transition": "slide",
+        "clearControlAggregation": false,
+        "viewId": "messagebox",
+        "viewName": "messagebox"
+        },
+        "Targetforms": {
+        "viewType": "XML",
+        "transition": "slide",
+        "clearControlAggregation": false,
+        "viewId": "forms",
+        "viewName": "forms"
+        },
+        "Targeticons": {
+        "viewType": "XML",
+        "transition": "slide",
+        "clearControlAggregation": false,
+        "viewId": "icons",
+        "viewName": "icons"
+        },
+
+        "Targetmessagestrip": {
+        "viewType": "XML",
+        "transition": "slide",
+        "clearControlAggregation": false,
+        "viewId": "messagestrip",
+        "viewName": "messagestrip"
+        },
+        "Targetswitch": {
+        "viewType": "XML",
+        "transition": "slide",
+        "clearControlAggregation": false,
+        "viewId": "switch",
+        "viewName": "switch"
+        },
+        "Targetcarousel": {
+        "viewType": "XML",
+        "transition": "slide",
+        "clearControlAggregation": false,
+        "viewId": "carousel",
+        "viewName": "carousel"
+        },
+        "Targettable": {
+        "viewType": "XML",
+        "transition": "slide",
+        "clearControlAggregation": false,
+        "viewId": "table",
+        "viewName": "table"
         }
       }
+
     },
     "rootView": {
       "viewName": "project2.view.App",
@@ -122,4 +255,5 @@
     "public": true,
     "service": "project2"
   }
+
 }

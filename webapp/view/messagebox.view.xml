@@ -1,0 +1,30 @@
+<mvc:View controllerName="project2.controller.messagebox"
+    xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.f"
+    xmlns:u="sap.ui.unified"
+	xmlns="sap.m"
+	xmlns:tnt="sap.tnt"
+    xmlns:layout="sap.ui.layout"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:grid="sap.ui.layout.cssgrid"
+	xmlns:dnd="sap.ui.core.dnd"
+	xmlns:dnd-grid="sap.f.dnd"
+    xmlns:t="sap.ui.table"
+    height="100%">
+<layout:VerticalLayout class="sapUiContentPadding" width="100%">
+		<Text text="Different approaches to set Initial focus" />
+		<Button
+			text="Action"
+			class="sapUiSmallMarginBottom"
+			press=".onInitialFocusOnAction"
+			width="250px"
+			ariaHasPopup="Dialog" />
+		<Button
+			text="Custom action"
+			class="sapUiSmallMarginBottom"
+			press=".onInitialFocusOnCustomAction"
+			width="250px"
+			ariaHasPopup="Dialog" />
+	</layout:VerticalLayout>
+    </mvc:View>
